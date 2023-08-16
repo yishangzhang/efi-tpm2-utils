@@ -24,8 +24,8 @@ else
     $(error Unsupported EFI_ARCH $(EFI_ARCH) specified)
 endif
 
-LDFLAGS += -nostdlib -shared -Bsymbolic -L$(gnuefi_libdir) \
-	   -T elf_$(EFI_ARCH)_efi.lds $(gnuefi_libdir)/crt0-efi-$(EFI_ARCH).o \
+LDFLAGS += -nostdlib -shared -Bsymbolic -L$(gnuefi_libdir) -L /usr/lib/\
+	   -T /usr/lib/elf_$(EFI_ARCH)_efi.lds /usr/lib/crt0-efi-$(EFI_ARCH).o \
 	   $(EXTRA_LDFLAGS)
 
 LIB_NAME := libefitcg2

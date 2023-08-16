@@ -5,6 +5,9 @@ This project provides various TPM 2.0 applications running in EFI.
 
 Build
 -----
+
+
+apt-get install gnu-efi
 $ make
 
 Note: use "CROSS_COMPILE=" in command line to specify cross compilation.
